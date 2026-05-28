@@ -23,7 +23,6 @@ body{
     grid-template-columns: 1fr;
 }
 
-
 /* MENU */
 
 .menu{
@@ -49,7 +48,7 @@ body{
     font-size: 18px;
 }
 
-/* MENU LINKS OCULTOS EN MOBILE */
+/* MENU LINKS */
 
 .menu-links{
     display: none;
@@ -65,7 +64,6 @@ body{
     font-size: 22px;
     cursor: pointer;
 }
-
 
 /* FILTROS */
 
@@ -164,7 +162,6 @@ body{
     background-color: #003f70;
 }
 
-
 /* PAGINACION */
 
 .paginacion{
@@ -172,6 +169,7 @@ body{
 
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 
 .paginacion button{
@@ -183,7 +181,6 @@ body{
 
     cursor: pointer;
 }
-
 
 /* FOOTER */
 
@@ -209,11 +206,12 @@ body{
     font-size: 22px;
 }
 
-/* ESCRITORIO */
+/* DESKTOP */
 
 @media (min-width: 576px){
-    
-}
+     .menu-icon{
+        display: none !important;
+    }
 
     body{
         grid-template-areas:
@@ -223,8 +221,7 @@ body{
 
         grid-template-columns: 220px 1fr;
         grid-template-rows: auto 1fr auto;
-.menu-icon{
-    display: none;
+
         min-height: 100vh;
     }
 
@@ -240,7 +237,9 @@ body{
         padding-top: 30px;
     }
 
-    /* MENU LINKS VISIBLES EN DESKTOP */
+   
+
+    /* MOSTRAR LINKS */
 
     .menu-links{
         display: flex;
@@ -254,23 +253,20 @@ body{
         overflow-y: auto;
     }
 
-    /* CARDS 4 ARRIBA Y 4 ABAJO */
+    /* 4 CARDS ARRIBA Y 4 ABAJO */
 
     .contenedor-cards{
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 15px;
     }
 
     .card img{
-        width: 100%;
         height: 120px;
-        object-fit: cover;
     }
 
     /* FOOTER */
 
     .footer{
         text-align: center;
-        padding: 20px;
     }
 }
