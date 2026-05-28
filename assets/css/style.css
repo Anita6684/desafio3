@@ -69,7 +69,6 @@ body{
 
 /* FILTROS */
 
-
 .filtros{
     grid-area: filtros;
 
@@ -106,13 +105,11 @@ body{
 
 /* CONTENEDOR CARDS */
 
-
 .contenedor-cards{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
-
 
 /* CARD */
 
@@ -128,6 +125,8 @@ body{
     align-items: center;
     gap: 10px;
 
+    width: 100%;
+
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
     transition: transform 0.3s;
@@ -139,7 +138,6 @@ body{
 
 .card img{
     width: 100%;
-    max-width: 220px;
     height: 150px;
 
     object-fit: cover;
@@ -169,7 +167,6 @@ body{
 
 /* PAGINACION */
 
-
 .paginacion{
     margin-top: 20px;
 
@@ -189,7 +186,6 @@ body{
 
 
 /* FOOTER */
-
 
 .footer{
     grid-area: footer;
@@ -215,24 +211,20 @@ body{
 
 /* ESCRITORIO */
 
-
 @media (min-width: 576px){
- .menu-icon{
-            display: none;
-        }
+    
+}
 
     body{
-        .menu-icon{
-            display: none; }
-
         grid-template-areas:
         "menu filtros"
         "menu principal"
-"footer principal";
+        "footer principal";
 
         grid-template-columns: 220px 1fr;
         grid-template-rows: auto 1fr auto;
-
+.menu-icon{
+    display: none;
         min-height: 100vh;
     }
 
@@ -246,10 +238,6 @@ body{
         gap: 30px;
 
         padding-top: 30px;
-    }
-
-    .menu-icon{
-        display: none;
     }
 
     /* MENU LINKS VISIBLES EN DESKTOP */
@@ -266,14 +254,17 @@ body{
         overflow-y: auto;
     }
 
-    /* CARDS */
+    /* CARDS 4 ARRIBA Y 4 ABAJO */
 
     .contenedor-cards{
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 15px;
     }
 
     .card img{
-        max-width: 150px;
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
     }
 
     /* FOOTER */
